@@ -14,8 +14,10 @@ export const CardImage = ({ app, className }: CardImageProps) => {
 		<img
 			alt={`${app.title} icon`}
 			className={`${sizeClass} rounded-2xl border border-gray-200 bg-white shadow-lg dark:border-gray-800 dark:bg-gray-900`}
+			height={64}
 			loading="eager"
 			src={app.icon}
+			width={64}
 		/>
 	) : (
 		<PlaceholderApp className={`app-card_icon ${sizeClass} rounded-2xl border border-gray-200 bg-white shadow-lg dark:border-gray-800 dark:bg-gray-900`} />

@@ -1,4 +1,5 @@
 ---
+import ComparisonJsonLd from "@/components/ComparisonJsonLd.astro";
 import ComparisonLayout from "@/components/ComparisonLayout.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
@@ -45,6 +46,7 @@ const canonical = new URL(
 	locale="en"
 	showFooterCta={false}
 >
+	<ComparisonJsonLd entry={entry} url={canonical} locale="en" />
 	<ComparisonLayout {...entry.data} locale="en" relatedItems={relatedItems}>
 		<Content />
 	</ComparisonLayout>

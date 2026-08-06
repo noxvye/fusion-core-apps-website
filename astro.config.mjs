@@ -23,6 +23,10 @@ export default defineConfig({
 			prefixDefaultLocale: false,
 		},
 	},
+	prefetch: {
+		prefetchAll: true,
+		defaultStrategy: "viewport",
+	},
 	integrations: [react(), mdx()],
 
 	vite: {

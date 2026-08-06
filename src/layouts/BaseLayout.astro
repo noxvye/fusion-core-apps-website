@@ -206,6 +206,8 @@ const resolvedOgImage =
 						<img
 							src="/logo.png"
 							alt="FusionCore Apps"
+							width="36"
+							height="36"
 							class="h-9 w-9 flex-shrink-0 rounded-xl object-contain transition-transform duration-300 group-hover:scale-105"
 						/>
 						<span
@@ -248,8 +250,8 @@ const resolvedOgImage =
 
 					<!-- Actions -->
 					<div class="flex flex-shrink-0 items-center gap-2">
-						<ThemeToggle client:load />
-						<LanguagePicker currentLocale={currentLocale} links={localeLinks} client:load />
+						<ThemeToggle client:idle />
+						<LanguagePicker currentLocale={currentLocale} links={localeLinks} client:idle />
 
 						<!-- Desktop CTA -->
 						<a href={navApps} class="nav-cta hidden items-center gap-1.5 md:inline-flex">
