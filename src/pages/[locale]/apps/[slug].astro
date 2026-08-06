@@ -40,7 +40,7 @@ const isBeta = app.data.beta ?? false;
 ---
 
 <BaseLayout {canonical} {description} {ogImage} ogImageWidth={app.data.icon ? 512 : 1536} ogImageHeight={app.data.icon ? 512 : 1024} {title} locale={locale} showFooterCta={false}>
-	<AppJsonLd app={app} canonical={canonical} />
+	{!app.data.beta && <AppJsonLd app={app} canonical={canonical} />}
 
 	<div class="-mx-4 sm:-mx-6 lg:-mx-8 mb-12">
 		<div class="app-detail-hero relative overflow-hidden">
