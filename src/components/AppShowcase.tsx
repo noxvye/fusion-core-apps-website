@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 const phones = [
   {
     src: "/images/screenshots/cartwise-list.jpg",
+    srcWebp: "/images/screenshots/cartwise-list.webp",
     alt: "CartWise grocery list app showing organized shopping items",
     position: "absolute left-0 top-8 z-10",
     rotate: -6,
@@ -11,9 +12,11 @@ const phones = [
     delay: 0.2,
     floatDuration: 6,
     floatY: [-0, -5, 0],
+    priority: false,
   },
   {
     src: "/images/screenshots/bible-tpt-reading.jpg",
+    srcWebp: "/images/screenshots/bible-tpt-reading.webp",
     alt: "Bible TPT app showing clean reading interface with dark theme",
     position: "absolute left-1/2 -translate-x-1/2 top-0 z-20",
     rotate: 0,
@@ -22,9 +25,11 @@ const phones = [
     delay: 0.4,
     floatDuration: 5,
     floatY: [0, -8, 0],
+    priority: true,
   },
   {
     src: "/images/screenshots/bible-tpt-verse.jpg",
+    srcWebp: "/images/screenshots/bible-tpt-verse.webp",
     alt: "Bible TPT verse of the day with colorful card design",
     position: "absolute right-0 top-8 z-10",
     rotate: 6,
@@ -33,11 +38,13 @@ const phones = [
     delay: 0.6,
     floatDuration: 7,
     floatY: [0, -5, 0],
+    priority: false,
   },
 ] as const;
 
 function PhoneFrame({
   src,
+  srcWebp,
   alt,
   rotate,
   scale,
@@ -46,6 +53,7 @@ function PhoneFrame({
   delay,
   floatDuration,
   floatY,
+  priority,
 }: (typeof phones)[number]) {
   return (
     <motion.div
@@ -68,12 +76,18 @@ function PhoneFrame({
         <div className="absolute top-2 left-1/2 -translate-x-1/2 w-20 h-5 bg-gray-950 rounded-full z-10" />
         {/* Screen */}
         <div className="absolute inset-0 overflow-hidden rounded-[2.3rem]">
-          <img
-            src={src}
-            alt={alt}
-            className="w-full h-full object-cover"
-            loading="eager"
-          />
+          <picture>
+            <source srcSet={srcWebp} type="image/webp" />
+            <img
+              src={src}
+              alt={alt}
+              width={1080}
+              height={2316}
+              className="w-full h-full object-cover"
+              loading={priority ? "eager" : "lazy"}
+              fetchPriority={priority ? "high" : "auto"}
+            />
+          </picture>
         </div>
       </motion.div>
     </motion.div>

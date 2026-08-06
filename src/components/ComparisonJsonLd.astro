@@ -1,0 +1,52 @@
+---
+import type { CollectionEntry } from "astro:content";
+import type { Locale } from "@/i18n/utils";
+
+const { entry, url, locale } = Astro.props as {
+	entry: CollectionEntry<"comparisons">;
+	url: string;
+	locale: Locale;
+};
+
+const localeToLanguage: Record<Locale, string> = { en: "en", es: "es-419", pt: "pt-BR" };
+
+// Comparison entries only track `updatedAt` (e.g. "2026-06", a valid ISO 8601
+// year-month). We surface it as both datePublished and dateModified rather than
+// fabricate a separate publish date.
+const structuredData = {
+	"@context": "https://schema.org",
+	"@type": "Article",
+	"headline": entry.data.title,
+	"description": entry.data.description,
+	"datePublished": entry.data.updatedAt,
+	"dateModified": entry.data.updatedAt,
+	"inLanguage": localeToLanguage[locale],
+	"mainEntityOfPage": {
+		"@type": "WebPage",
+		"@id": url,
+	},
+	"author": {
+		"@type": "Organization",
+		"name": "FusionCore Apps",
+		"url": "https://www.fusioncoreapps.com",
+	},
+	"publisher": {
+		"@type": "Organization",
+		"name": "FusionCore Apps",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://www.fusioncoreapps.com/logo.png",
+			"width": 528,
+			"height": 551,
+		},
+	},
+	"url": url,
+};
+---
+
+<!-- eslint-disable astro/no-set-html-directive -->
+<script
+	is:inline
+	set:html={JSON.stringify(structuredData).replace(/</g, "\\u003c")}
+	type="application/ld+json"
+></script>

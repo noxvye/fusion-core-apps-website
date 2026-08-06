@@ -1,0 +1,26 @@
+{
+	"name": "FusionCore Apps",
+	"description": "Indie Android apps by FusionCore — Bible study, grocery lists, warranty tracking, and food expiry. Marketing site, trilingual (en/es/pt).",
+	"url": "https://www.fusioncoreapps.com",
+	"documentation": "https://www.fusioncoreapps.com/llms.txt",
+	"languages": ["en", "es", "pt"],
+	"resources": [
+		{
+			"name": "Apps",
+			"description": "Android app listings and their Google Play links",
+			"url": "https://www.fusioncoreapps.com/apps"
+		},
+		{
+			"name": "Blog",
+			"description": "Guides, tutorials, and product articles",
+			"url": "https://www.fusioncoreapps.com/blog"
+		},
+		{
+			"name": "Comparisons",
+			"description": "Head-to-head app comparison articles",
+			"url": "https://www.fusioncoreapps.com/compare-apps"
+		}
+	],
+	"sitemap": "https://www.fusioncoreapps.com/sitemap-index.xml",
+	"contact": "https://www.fusioncoreapps.com/contact"
+}

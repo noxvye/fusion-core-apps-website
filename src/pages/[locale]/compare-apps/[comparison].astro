@@ -1,4 +1,5 @@
 ---
+import ComparisonJsonLd from "@/components/ComparisonJsonLd.astro";
 import ComparisonLayout from "@/components/ComparisonLayout.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { type Locale } from "@/i18n/utils";
@@ -58,6 +59,7 @@ const canonical = new URL(
 	locale={locale}
 	showFooterCta={false}
 >
+	<ComparisonJsonLd entry={entry} url={canonical} locale={locale} />
 	<ComparisonLayout {...entry.data} locale={locale} relatedItems={relatedItems}>
 		<Content />
 	</ComparisonLayout>

@@ -12,11 +12,20 @@ Allow: /pt/apps?q=
 # Prevents crawl budget waste on parameterized variants like ?from=AppAgg.com or ?utm_source=...
 Disallow: /*?*
 
-# Block specific bots known for scraping without indexing value
+# AI / LLM crawlers — explicitly allowed to read site content (admin and API stay private).
+# LLM guide: https://www.fusioncoreapps.com/llms.txt
 User-agent: GPTBot
-Disallow: /
-
 User-agent: ChatGPT-User
-Disallow: /
+User-agent: OAI-SearchBot
+User-agent: ClaudeBot
+User-agent: anthropic-ai
+User-agent: Claude-Web
+User-agent: PerplexityBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /admin
+Disallow: /admin/
+Disallow: /api/
 
 Sitemap: https://www.fusioncoreapps.com/sitemap-index.xml
