@@ -1,6 +1,6 @@
 # FusionCore Apps Website
 
-Web presence / Google Play landing site for the FusionApps family (Biblia TLA, Bible TPT, CartWise, Claimly) — marketing pages, SEO blog, app comparisons, and a PIN-gated admin panel. Astro-rendered static site with React islands, trilingual (en/es/pt).
+Web presence / Google Play landing site for the FusionApps family (Biblia TLA, Bible TPT, CartWise, Claimly, Expiroo — closed beta) — marketing pages, SEO blog, app comparisons, and a PIN-gated admin panel. Astro-rendered static site with React islands, trilingual (en/es/pt).
 
 ## Stack
 

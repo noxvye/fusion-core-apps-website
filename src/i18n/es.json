@@ -29,7 +29,7 @@
     "ctaBody": "Todas nuestras apps son gratuitas en Google Play. Algunas ofrecen funciones adicionales mediante suscripción opcional, pero la experiencia principal siempre es gratis.",
     "browseAllApps": "Ver todas las Apps",
     "skipToContent": "Saltar al contenido principal",
-    "mobileStats": "Apps Android gratis · 3 apps · 3.3K+ descargas",
+    "mobileStats": "Apps Android gratis · 5 apps · 3.3K+ descargas",
     "compareApps": "Comparar apps"
   },
   "contact": {
@@ -64,7 +64,7 @@
     "appsViewAll": "Ver todas",
     "appsEmpty": "Apps próximamente.",
     "appsViewAllMobile": "Ver todas las apps",
-    "socialAppsPublished": "Apps publicadas",
+    "socialAppsPublished": "Apps",
     "socialToDownload": "Para descargar",
     "socialWhatUsersSay": "Lo que dicen los usuarios",
     "socialTrustedBy": "La confianza de miles de usuarios",
@@ -79,7 +79,13 @@
     "ctaTitle": "Apps premium. Gratis para empezar.",
     "ctaBody": "Todas nuestras apps son gratuitas en Google Play. Algunas ofrecen funciones adicionales mediante suscripción opcional, pero la experiencia principal siempre es gratis.",
     "ctaBrowse": "Ver todas las Apps",
-    "ctaContact": "Contáctanos"
+    "ctaContact": "Contáctanos",
+    "expirooBadge": "Nuevo · Beta cerrada",
+    "expirooTitle": "Te presentamos Expiroo",
+    "expirooDeck": "Controla fechas de caducidad y tu inventario del hogar — funciona sin conexión y sin cuenta. Sé de los primeros en probarla.",
+    "expirooSecondary": "Ver más",
+    "expirooCtaAria": "Únete a la beta cerrada de Expiroo — se abre en una pestaña nueva",
+    "expirooSecondaryAria": "Ver más sobre Expiroo"
   },
   "apps": {
     "overline": "Google Play · Desarrollador Verificado",

@@ -169,8 +169,8 @@ const BetaIcon = () => (
 const AppCard = React.memo(function AppCard({ app, mode, locale, t }: { app: App; mode: "grid" | "list"; locale: Locale; t: ReturnType<typeof useTranslations> }) {
 	const [showModal, setShowModal] = React.useState(false);
 	const price = app.price ?? "Free";
-	const rating = app.rating ?? 4.5;
-	const isTopRated = rating >= 4.5;
+	const rating = app.rating ?? null;
+	const isTopRated = rating !== null && rating >= 4.5;
 	const isBeta = app.beta ?? false;
 	const betaUrl = app.betaGroupUrl ?? app.playUrl;
 	const accent = CATEGORY_ACCENTS[app.category] ?? DEFAULT_ACCENT;
@@ -193,8 +193,8 @@ const AppCard = React.memo(function AppCard({ app, mode, locale, t }: { app: App
 	}, [showModal]);
 
 	// ── Star row helper ──
-	const full = Math.floor(rating);
-	const hasHalf = rating - full >= 0.5;
+	const full = rating !== null ? Math.floor(rating) : 0;
+	const hasHalf = rating !== null && rating - full >= 0.5;
 	const stars = Array.from({ length: 5 }).map((_, i) => (
 		<Star
 			key={i}
@@ -256,11 +256,13 @@ const AppCard = React.memo(function AppCard({ app, mode, locale, t }: { app: App
 								</div>
 								<span className="mt-0.5 text-[11px] font-medium text-brand-700 dark:text-brand-400">{app.category}</span>
 								<p className="mt-1 text-sm text-gray-500 dark:text-gray-400 line-clamp-1 leading-snug">{app.tagline}</p>
-								<div className="mt-2 flex items-center gap-2">
-									<div className="flex items-center gap-0.5">{stars}</div>
-									<span className="text-[11px] font-semibold text-gray-400 dark:text-gray-500">{rating}</span>
-									{app.downloadsLabel && <span className="text-[11px] text-gray-400 dark:text-gray-500">&middot; {app.downloadsLabel}</span>}
-								</div>
+								{rating !== null && (
+									<div className="mt-2 flex items-center gap-2">
+										<div className="flex items-center gap-0.5">{stars}</div>
+										<span className="text-[11px] font-semibold text-gray-400 dark:text-gray-500">{rating}</span>
+										{app.downloadsLabel && <span className="text-[11px] text-gray-400 dark:text-gray-500">&middot; {app.downloadsLabel}</span>}
+									</div>
+								)}
 							</a>
 
 							{/* Right CTA */}
@@ -375,11 +377,13 @@ const AppCard = React.memo(function AppCard({ app, mode, locale, t }: { app: App
 						<p className="mt-1 text-sm text-gray-500 dark:text-gray-400 leading-snug line-clamp-2">
 							{app.tagline}
 						</p>
-						<div className="mt-3 flex items-center gap-2.5" aria-label={`Rating ${rating} out of 5`}>
-							<div className="flex items-center gap-0.5">{stars}</div>
-							<span className="text-[11px] font-semibold text-gray-400 dark:text-gray-500">{rating}</span>
-							{app.downloadsLabel && <span className="text-[11px] text-gray-400 dark:text-gray-500">&middot; {app.downloadsLabel}</span>}
-						</div>
+						{rating !== null && (
+							<div className="mt-3 flex items-center gap-2.5" aria-label={`Rating ${rating} out of 5`}>
+								<div className="flex items-center gap-0.5">{stars}</div>
+								<span className="text-[11px] font-semibold text-gray-400 dark:text-gray-500">{rating}</span>
+								{app.downloadsLabel && <span className="text-[11px] text-gray-400 dark:text-gray-500">&middot; {app.downloadsLabel}</span>}
+							</div>
+						)}
 					</a>
 
 					{/* CTA footer */}

@@ -29,7 +29,7 @@
     "ctaBody": "Every app is free to download on Google Play. Some unlock additional features through an optional subscription, but the core experience is always free.",
     "browseAllApps": "Browse All Apps",
     "skipToContent": "Skip to main content",
-    "mobileStats": "Free Android apps · 3 apps · 3.3K+ downloads",
+    "mobileStats": "Free Android apps · 5 apps · 3.3K+ downloads",
     "compareApps": "Compare apps"
   },
   "contact": {
@@ -64,7 +64,7 @@
     "appsViewAll": "View all",
     "appsEmpty": "Apps coming soon.",
     "appsViewAllMobile": "View all apps",
-    "socialAppsPublished": "Apps Published",
+    "socialAppsPublished": "Apps",
     "socialToDownload": "To Download",
     "socialWhatUsersSay": "What users say",
     "socialTrustedBy": "Trusted by thousands of users",
@@ -79,7 +79,13 @@
     "ctaTitle": "Premium apps. Free to start.",
     "ctaBody": "Every app is free to download on Google Play. Some unlock additional features through an optional subscription, but the core experience is always free.",
     "ctaBrowse": "Browse All Apps",
-    "ctaContact": "Contact us"
+    "ctaContact": "Contact us",
+    "expirooBadge": "New · Closed beta",
+    "expirooTitle": "Meet Expiroo",
+    "expirooDeck": "Track expiry dates and your home inventory — works offline, no account needed. Be one of the first testers.",
+    "expirooSecondary": "Learn more",
+    "expirooCtaAria": "Join the Expiroo closed beta — opens in a new tab",
+    "expirooSecondaryAria": "Learn more about Expiroo"
   },
   "apps": {
     "overline": "Google Play · Verified Developer",

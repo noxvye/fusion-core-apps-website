@@ -23,7 +23,7 @@ const apps = entries.map(({ slug, data }) => ({
 	playUrl: data.playUrl,
 	price: data.price ?? "Free",
 	tags: data.tags ?? [],
-	rating: data.rating ?? 4.5,
+	rating: data.rating,
 	downloadsLabel: data.downloads ?? "1K+",
 	version: data.version,
 	lastUpdated: data.lastUpdated,

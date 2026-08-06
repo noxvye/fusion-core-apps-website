@@ -203,6 +203,40 @@ const features =
 		</section>
 	</AnimatedSection>
 
+	<!-- ─── EXPIROO LAUNCH BAND ─── -->
+	<AnimatedSection client:visible delay={0.05}>
+		<section class="mb-24" aria-labelledby="expiroo-heading">
+			<div class="cta-panel relative overflow-hidden rounded-3xl px-6 py-8 sm:px-10 sm:py-10">
+				<div class="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+					<div class="flex items-start gap-4 sm:gap-5">
+						<img src="/images/apps/expiroo/icon.png" alt="" width="64" height="64" loading="lazy" decoding="async" class="h-14 w-14 flex-shrink-0 rounded-[16px] shadow-[0_10px_36px_rgba(0,0,0,0.45)] ring-1 ring-white/15 sm:h-16 sm:w-16" />
+						<div class="min-w-0">
+							<span class="inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-bold tracking-wide uppercase" style="background: rgba(255,138,42,0.15); color: var(--color-accent-400);">
+								<span class="h-1.5 w-1.5 rounded-full" style="background: var(--color-accent-400);" aria-hidden="true"></span>
+								{t("home.expirooBadge")}
+							</span>
+							<h2 id="expiroo-heading" class="mt-2 text-white" style="font-family: var(--font-display); font-weight: 800; font-size: clamp(1.375rem, 1.1rem + 1.2vw, 1.875rem); letter-spacing: -0.03em; line-height: 1.1;">
+								{t("home.expirooTitle")}
+							</h2>
+							<p class="mt-1.5 max-w-md text-[15px] leading-relaxed text-white/70">
+								{t("home.expirooDeck")}
+							</p>
+						</div>
+					</div>
+					<div class="flex flex-col gap-3 sm:flex-shrink-0 sm:flex-row sm:items-center">
+						<a href="https://groups.google.com/g/expiroo-testers" target="_blank" rel="noopener noreferrer" class="button button--beta w-full min-h-[44px] gap-2 font-semibold focus:ring-white/70 focus:ring-offset-transparent sm:w-auto" aria-label={t("home.expirooCtaAria")}>
+							<svg class="h-4 w-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+							<span>{t("app.joinBeta")}</span>
+						</a>
+						<a href={`/${locale}/apps/expiroo`} class="button w-full min-h-[44px] border border-white/25 text-white hover:bg-white/10 focus:ring-white/70 focus:ring-offset-transparent sm:w-auto" aria-label={t("home.expirooSecondaryAria")}>
+							{t("home.expirooSecondary")}
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</AnimatedSection>
+
 	<!-- ─── SOCIAL PROOF / STATS ─────────────────────────────────────────────── -->
 	<section class="-mx-4 sm:-mx-6 lg:-mx-8 mb-0">
 		<div class="social-proof-section relative overflow-hidden">
@@ -221,7 +255,7 @@ const features =
 							<div class="social-proof-stat-label">{t("home.statsRating")}</div>
 						</div>
 						<div class="text-center">
-							<div class="social-proof-stat-num">3</div>
+							<div class="social-proof-stat-num">5</div>
 							<div class="social-proof-stat-label">{t("home.socialAppsPublished")}</div>
 						</div>
 						<div class="text-center">
